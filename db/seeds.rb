@@ -24,21 +24,35 @@ ingredients['drinks'].each do |ingredient|
 end
 
 puts "Creating cocktails..."
-cocktail = Cocktail.create(name: "Mojito" )
+
+file = URI.open('https://chefjamika.com/wp-content/uploads/mikas-mojito-1024x683.jpg')
+cocktail = Cocktail.create(name: 'Mojito')
+cocktail.photo.attach(io: file, filename: 'mojito.png', content_type: 'image/jpg')
 puts "Created #{cocktail.name}"
-cocktail = Cocktail.create(name: "Espresso martini" )
+
+file = URI.open('https://www.simplejoy.com/wp-content/uploads/2018/05/pina_colada.jpg')
+cocktail = Cocktail.create(name: 'Pinna colada')
+cocktail.photo.attach(io: file, filename: 'pinna_colada.png', content_type: 'image/jpg')
 puts "Created #{cocktail.name}"
-cocktail = Cocktail.create(name: "Pimm’s" )
+
+file = URI.open('https://cookingwithcurls.com/wp-content/uploads/2017/12/Caribbean-Rum-Punch-is-the-cure-for-shoveling-snow-and-braving-the-freezing-cold-temperatures-%C2%A9-2017-COOKING-WITH-CURLS.jpg')
+cocktail = Cocktail.create(name: 'Rum punch')
+cocktail.photo.attach(io: file, filename: 'rum_punch.png', content_type: 'image/jpg')
 puts "Created #{cocktail.name}"
-cocktail = Cocktail.create(name: "Passion fruit martini" )
+
+file = URI.open('https://mixthatdrink.com/wp-content/uploads/2009/05/cosmopolitan-cocktail.jpg')
+cocktail = Cocktail.create(name: 'Cosmopolitan')
+cocktail.photo.attach(io: file, filename: 'cosmopolitan.png', content_type: 'image/jpg')
 puts "Created #{cocktail.name}"
-cocktail = Cocktail.create(name: "Pina colada" )
+
+file = URI.open('https://kitchenswagger.com/wp-content/uploads/2019/10/aperol-spritz-dark2.jpg')
+cocktail = Cocktail.create(name: 'Aperol spritz')
+cocktail.photo.attach(io: file, filename: 'aperol_spritz.png', content_type: 'image/jpg')
 puts "Created #{cocktail.name}"
-cocktail = Cocktail.create(name: "Rum punch" )
-puts "Created #{cocktail.name}"
-cocktail = Cocktail.create(name: "Cosmopolitan" )
-puts "Created #{cocktail.name}"
-cocktail = Cocktail.create(name: "Aperol spritz" )
+
+file = URI.open('https://i1.wp.com/www.alicepegie.com/fr/wp-content/uploads/2013/05/cocktail-conga-8-750x965.jpg?resize=618%2C795')
+cocktail = Cocktail.create(name: 'Cocktail sans alcool')
+cocktail.photo.attach(io: file, filename: 'cocktail_ss_alcool.png', content_type: 'image/jpg')
 puts "Created #{cocktail.name}"
 
 puts "Finished!"
